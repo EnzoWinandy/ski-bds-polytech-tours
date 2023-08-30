@@ -4,7 +4,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import { Tree, TreeNode } from "react-organizational-chart";
-import { Gradient } from "../utils/Gradient.js";
 import styled from "styled-components";
 import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
@@ -372,8 +371,6 @@ export default function Accueil() {
   useEffect(() => {
     document.title = "Ski | BDS Polytech Tours";
 
-    var gradient = new Gradient();
-    gradient.initGradient("#gradient-canvas");
 
     const aboutIntro = aboutIntroRef.current;
     const heroBanner = heroBannerRef.current;
@@ -629,7 +626,6 @@ export default function Accueil() {
           <div className="circle1"></div>
           <div className="circle2"></div>
           <div className="circle3"></div>
-          <canvas id="gradient-canvas" data-transition-in />
         </div>
         <div className="overlay">
           <div>
