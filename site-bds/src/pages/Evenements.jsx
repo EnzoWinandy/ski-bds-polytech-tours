@@ -287,49 +287,46 @@ const TeamOffice = () => (
   </Tree>
 );
 
-const TeamPart = () => (
+const PresentationStation = () => (
   <Tree
-    lineWidth={"2px"}
+    lineWidth={"0px"}
     lineColor={"white"}
-    lineBorderRadius={"10px"}
-    label={
-      <div className="lbl-orga">
-        <span>Team PART</span>
-      </div>
-    }
+    lineBorderRadius={"0px"}
   >
     {/* Responsable */}
     <TreeNode
       label={
         <StyledNode>
-          <div className="station__pic">
-            <img src="/img/staff/amelie.png" className="station__pic" />
-          </div>
-          <span className="staff__name">Amélie</span>
-        </StyledNode>
-      }
-    />
-    <TreeNode
-      label={
-        <StyledNode>
-          <div className="station__pic">
-            <img src="/img/staff/clem.png" />
-          </div>
-          <span className="staff__name">Clément</span>
+          <div className="content-style">
+              <h2>Le Domaines des deux alpes</h2>
+              <p>
+                Le domaine skiable des Deux Alpes est l'un des plus grands et des plus renommés en France. Situé dans les Alpes françaises, il offre une expérience exceptionnelle pour les amateurs de sports d'hiver.
+                <br />
+                Le domaine skiable s'étend sur environ 200 kilomètres de pistes, avec des altitudes allant de 1 300 à 3 600 mètres. Cela garantit des conditions de neige variées et des panoramas spectaculaires.
+                <br />
+                Les Deux Alpes proposent des pistes adaptées à tous les niveaux de skieurs, des débutants aux experts. On y trouve des pistes vertes et bleues pour les novices, ainsi que des pistes rouges et noires pour les skieurs plus expérimentés. Mais surtout l'un des plus hauts secteur pour débutant situé à plus de 2100m d'altitude.
+                <br />
+                Le snowpark des Deux Alpes est l'un des plus grands d'Europe, avec une grande variété d'obstacles, de sauts et de modules pour les snowboarders et les freestylers. Il attire des riders du monde entier.
+                <br />
+                Le glacier de Mont-de-Lans, accessible par remontées mécaniques, permet de skier toute l'année, faisant des Deux Alpes une destination unique pour les amateurs de ski estival.
+                <br />
+                En dehors des activités de ski, la station propose une vie nocturne animée avec des bars, des restaurants et des événements tout au long de la saison.
+                </p>
+            </div>
         </StyledNode>
       }
     />
   </Tree>
 );
 
-const TeamGoodies = () => (
+const PresentationGlacier = () => (
   <Tree
-    lineWidth={"2px"}
+    lineWidth={"0px"}
     lineColor={"white"}
-    lineBorderRadius={"10px"}
+    lineBorderRadius={"0px"}
     label={
       <div className="lbl-orga">
-        <span>Team GOODIES</span>
+        <span>Le glacier</span>
       </div>
     }
   >
@@ -337,20 +334,36 @@ const TeamGoodies = () => (
     <TreeNode
       label={
         <StyledNode>
-          <div className="station__pic">
-            <img src="/img/staff/caro.png" />
-          </div>
-          <span className="staff__name">Caroline</span>
-        </StyledNode>
-      }
-    />
-    <TreeNode
-      label={
-        <StyledNode>
-          <div className="station__pic">
-            <img src="/img/staff/thomv.png" />
-          </div>
-          <span className="staff__name">Thomas .V</span>
+          <span className="staff__name" >Le Glacier de mont-de-lans</span>
+          <div className="plan__station__pic" style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "8%",
+              width: "50%",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "10px",
+            }}>
+              <img src="/img/Glacier.jpg" />
+            </div>
+          <div className="content-style">
+              <h2>Le Domaines des deux alpes</h2>
+              <p>
+                Le domaine skiable des Deux Alpes est l'un des plus grands et des plus renommés en France. Situé dans les Alpes françaises, il offre une expérience exceptionnelle pour les amateurs de sports d'hiver.
+                <br />
+                Le domaine skiable s'étend sur environ 200 kilomètres de pistes, avec des altitudes allant de 1 300 à 3 600 mètres. Cela garantit des conditions de neige variées et des panoramas spectaculaires.
+                <br />
+                Les Deux Alpes proposent des pistes adaptées à tous les niveaux de skieurs, des débutants aux experts. On y trouve des pistes vertes et bleues pour les novices, ainsi que des pistes rouges et noires pour les skieurs plus expérimentés. Mais surtout l'un des plus hauts secteur pour débutant situé à plus de 2100m d'altitude.
+                <br />
+                Le snowpark des Deux Alpes est l'un des plus grands d'Europe, avec une grande variété d'obstacles, de sauts et de modules pour les snowboarders et les freestylers. Il attire des riders du monde entier.
+                <br />
+                Le glacier de Mont-de-Lans, accessible par remontées mécaniques, permet de skier toute l'année, faisant des Deux Alpes une destination unique pour les amateurs de ski estival.
+                <br />
+                En dehors des activités de ski, la station propose une vie nocturne animée avec des bars, des restaurants et des événements tout au long de la saison.
+                </p>
+              <p> BDS'ment 💜 </p>
+              <span className="signe">L'équipe</span>
+            </div>
         </StyledNode>
       }
     />
@@ -680,9 +693,6 @@ export default function Accueil() {
               </p>
               <p> BDS'ment 💜 </p>
               <span className="signe">L'équipe</span>
-              <div>
-                <Link className="file-dl">Télécharger la brochure</Link>
-              </div>
             </div>
             <div className="instagram-tiles">
               <div className="instagram-tiles__grid">
@@ -890,11 +900,9 @@ export default function Accueil() {
             <InfoStationPiste></InfoStationPiste>
           </div>
           <div className="tree">
-            <TeamPart></TeamPart>
+            <PresentationStation></PresentationStation>
           </div>
-          <div style={{ marginBottom: "160px" }} className="tree">
-            <TeamGoodies></TeamGoodies>
-          </div>
+
         </div>
       </div>
       <section className="staff3" ref={staffRef2}>
@@ -922,6 +930,7 @@ export default function Accueil() {
           <div className="organigramme">
             <div className="tree">
               <ImageCarousel />
+              <PresentationGlacier></PresentationGlacier>
             </div>
           </div>
         </div>

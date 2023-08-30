@@ -979,6 +979,7 @@ a:hover {
 
 .sportifs {
   position: absolute;
+  top: 0px;
   bottom: -40%;
   z-index: -1;
   height: 165%;
