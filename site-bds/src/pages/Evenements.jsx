@@ -173,17 +173,8 @@ const VideoStation = () => (
     <TreeNode
       label={
         <StyledNode>
-          
-          <div className="plan__station__pic" style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "8%",
-              width: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "10px",
-            }}>
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iDsEdk7zUww?si=yo0CdzWxzQ6pnUh1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/iDsEdk7zUww?si=yo0CdzWxzQ6pnUh1"></iframe>
           </div>
         </StyledNode>
       }
@@ -347,22 +338,14 @@ const PresentationGlacier = () => (
               <img src="/img/Glacier.jpg" />
             </div>
           <div className="content-style">
-              <h2>Le Domaines des deux alpes</h2>
+              <h2>Les pistes les plus hautes de france</h2>
               <p>
-                Le domaine skiable des Deux Alpes est l'un des plus grands et des plus renommés en France. Situé dans les Alpes françaises, il offre une expérience exceptionnelle pour les amateurs de sports d'hiver.
+                À une altitude impressionnante allant jusqu'à 3 600 mètres, ce glacier offre des conditions de neige optimales et une vue panoramique à couper le souffle sur les montagnes environnantes.
                 <br />
-                Le domaine skiable s'étend sur environ 200 kilomètres de pistes, avec des altitudes allant de 1 300 à 3 600 mètres. Cela garantit des conditions de neige variées et des panoramas spectaculaires.
+                L'un des aspects les plus extraordinaires du glacier des Deux Alpes est sa possibilité de skier en été. Cette caractéristique unique en fait l'une des destinations de ski estival les plus prisées en Europe.
                 <br />
-                Les Deux Alpes proposent des pistes adaptées à tous les niveaux de skieurs, des débutants aux experts. On y trouve des pistes vertes et bleues pour les novices, ainsi que des pistes rouges et noires pour les skieurs plus expérimentés. Mais surtout l'un des plus hauts secteur pour débutant situé à plus de 2100m d'altitude.
-                <br />
-                Le snowpark des Deux Alpes est l'un des plus grands d'Europe, avec une grande variété d'obstacles, de sauts et de modules pour les snowboarders et les freestylers. Il attire des riders du monde entier.
-                <br />
-                Le glacier de Mont-de-Lans, accessible par remontées mécaniques, permet de skier toute l'année, faisant des Deux Alpes une destination unique pour les amateurs de ski estival.
-                <br />
-                En dehors des activités de ski, la station propose une vie nocturne animée avec des bars, des restaurants et des événements tout au long de la saison.
+                Le glacier propose une variété de pistes adaptées à tous les niveaux de skieurs, des débutants aux experts.
                 </p>
-              <p> BDS'ment 💜 </p>
-              <span className="signe">L'équipe</span>
             </div>
         </StyledNode>
       }
