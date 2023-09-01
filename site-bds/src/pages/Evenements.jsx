@@ -183,100 +183,20 @@ const VideoStation = () => (
   </Tree>
 );
 
-const TeamOffice = () => (
+const LienWebcam = () => (
   <Tree
-    lineWidth={"2px"}
+    lineWidth={"0px"}
     lineColor={"white"}
-    lineBorderRadius={"10px"}
+    lineBorderRadius={"0px"}
     label={
-      <div className="lbl-orga">
-        <span>Bureau</span>
+      <div className="lbl-orga__no">
+        <a href="https://www.les2alpes.com/hiver/live/webcams/">Ici lien vers les webcams !</a>
       </div>
     }
   >
-    {/* Responsable */}
-    <TreeNode
-      label={
-        <StyledNode>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "8%",
-              width: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "10px",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              className="station__pic"
-            >
-              <img src="/img/staff/axel.png" />
-
-              <span className="staff__name">Axel</span>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              className="station__pic"
-            >
-              <img src="/img/staff/anais.png" style={{ width: "80px" }} />
-              <span className="staff__name">Anaïs</span>
-            </div>
-          </div>
-          <span className="staff__rank">Président(e)</span>
-        </StyledNode>
-      }
-    >
-      <TreeNode
-        label={
-          <StyledNode>
-            <div className="station__pic">
-              <img src="/img/staff/axelle.png" />
-            </div>
-            <span className="staff__name">Axelle</span>
-            <span className="staff__rank">Trésorière</span>
-          </StyledNode>
-        }
-      >
-        <TreeNode
-          label={
-            <StyledNode>
-              <div className="station__pic">
-                <img src="/img/staff/chloe.png" />
-              </div>
-              <span className="staff__name">Chloé</span>
-              <span className="staff__rank">Vice-trésorière</span>
-            </StyledNode>
-          }
-        />
-      </TreeNode>
-      <TreeNode
-        label={
-          <StyledNode>
-            <div className="station__pic">
-              <img src="/img/staff/nathf.png" />
-            </div>
-            <span className="staff__name">Nathan .F</span>
-            <span className="staff__rank">Secrétaire</span>
-          </StyledNode>
-        }
-      />
-    </TreeNode>
   </Tree>
 );
+
 
 const PresentationStation = () => (
   <Tree
@@ -358,6 +278,7 @@ export default function Accueil() {
   const heroBannerRef = useRef(null);
   const staffRef = useRef(null);
   const staffRef2 = useRef(null);
+  const staffRef3 = useRef(null);
 
   const lenis = new Lenis({
     duration: 1,
@@ -372,6 +293,7 @@ export default function Accueil() {
     const heroBanner = heroBannerRef.current;
     const staff = staffRef.current;
     const staff2 = staffRef2.current;
+    const staff3 = staffRef3.current;
 
     gsap.set(aboutIntro, { y: "100%", opacity: 0 });
 
@@ -512,6 +434,7 @@ export default function Accueil() {
         },
       }
     );
+
     gsap.fromTo(
       ".col0",
       { y: "75%" },
@@ -860,11 +783,15 @@ export default function Accueil() {
             <div className="tree">
               <VideoStation />
             </div>
+            <div className="tree">
+              <PlanStation></PlanStation>
+              <InfoStation></InfoStation>
+              <InfoStationPiste></InfoStationPiste>
+            </div>
+            <div className="tree">
+              <PresentationStation></PresentationStation>
+            </div> 
           </div>
-        </div>        
-      </section>
-      <div className="staff2">
-        <div className="staff__box-image">
           <div className="staff__box__wrapper-image-bottom">
             <img
               className="staff__box-image-bottom"
@@ -875,19 +802,15 @@ export default function Accueil() {
               alt="dots"
             />
           </div>
+        </div>    
+         
+      </section>
+      <div className="staff2">
+        <div className="staff__box-image">
+          
         </div>
-        <div className="organigramme">
-          <div className="tree">
-            <PlanStation></PlanStation>
-            <InfoStation></InfoStation>
-            <InfoStationPiste></InfoStationPiste>
-          </div>
-          <div className="tree">
-            <PresentationStation></PresentationStation>
-          </div>
-
-        </div>
-      </div>
+        
+      </div>   
       <section className="staff3" ref={staffRef2}>
         <div className="staff__wrapper__2">
           <div className="staff__box-image">
@@ -913,6 +836,43 @@ export default function Accueil() {
           <div className="organigramme">
             <div className="tree">
               <ImageCarousel />
+              <LienWebcam />
+            </div>
+            <div className="tree">
+              <PresentationGlacier></PresentationGlacier>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section className="staff4" ref={staffRef3}>
+        <div className="staff__wrapper__3">
+          <div className="staff__box-image">
+            <div className="staff__box__wrapper-image-top">
+              <img
+                className="staff__box-image-top"
+                src="/bg-top.svg"
+                width="250"
+                height="150"
+                loading="lazy"
+                alt="dots"
+              />
+            </div>
+          </div>
+          <div className="staff__box-content">
+            <div className="staff__title__wrapper">
+              <div className="staff__title__2">
+                <span>De la neige en Avril ?</span>
+                <div className="line"></div>
+              </div>
+            </div>
+          </div>
+          <div className="organigramme">
+            <div className="tree">
+              <ImageCarousel />
+              <LienWebcam />
+            </div>
+            <div className="tree">
               <PresentationGlacier></PresentationGlacier>
             </div>
           </div>

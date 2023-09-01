@@ -1437,6 +1437,13 @@ a:hover {
   background: white;
 }
 
+.staff4 {
+  position: relative;
+  z-index: 2;
+  --val3: 1;
+  background: white;
+}
+
 .staff2 {
   position: relative;
 }
@@ -1447,7 +1454,8 @@ a:hover {
   position: relative;
   z-index: 1;
   background: var(--primary-color);
-  clip-path: circle(calc(var(--val) * 1%) at 50% calc(8px * 52));
+  clip-path: circle(calc(var(--val) * 1%) at 50% calc(8px * 90));
+  
 }
 
 .staff__wrapper__2 {
@@ -1457,6 +1465,15 @@ a:hover {
   z-index: 1;
   background: var(--background-color);
   clip-path: circle(calc(var(--val2) * 1%) at 50% calc(8px * 52));
+}
+
+.staff__wrapper__3 {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  background: var(--secondary-color);
+  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 52));
 }
 
 .staff__box-image {
@@ -1491,6 +1508,7 @@ a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 
 .staff__box-image-bottom {
@@ -1727,6 +1745,20 @@ a:hover {
 }
 .lbl-orga {
   background-image: linear-gradient(90deg, #ffffffe3 0, #ffffffe8 100%), url(../public/img/line.jpg);
+  background-size: 150%;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: Monument;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  border-radius: 15px;
+}
+
+.lbl-orga__no {
   background-size: 150%;
   display: flex;
   padding: 20px;
