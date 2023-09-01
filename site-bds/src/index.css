@@ -1472,7 +1472,7 @@ a:hover {
   display: block;
   position: relative;
   z-index: 1;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 52));
 }
 

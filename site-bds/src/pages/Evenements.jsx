@@ -272,7 +272,6 @@ const PresentationGlacier = () => (
     />
   </Tree>
 );
-
 export default function Accueil() {
   const aboutIntroRef = useRef(null);
   const heroBannerRef = useRef(null);
@@ -426,6 +425,29 @@ export default function Accueil() {
             "+=" +
             (100 -
               parseFloat(getComputedStyle(staff2).getPropertyValue("--val2"))) +
+            "%",
+          pin: true,
+          pinSpacing: true,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".staff__wrapper__3",
+      { "--val3": 1 },
+      {
+        "--val3": 100,
+        ease: "power2.inOut",
+        lazy: false,
+        scrollTrigger: {
+          trigger: staff3,
+          start: "5% 5%",
+          end: () =>
+            "+=" +
+            (100 -
+              parseFloat(getComputedStyle(staff3).getPropertyValue("--val3"))) +
             "%",
           pin: true,
           pinSpacing: true,
@@ -861,8 +883,8 @@ export default function Accueil() {
           </div>
           <div className="staff__box-content">
             <div className="staff__title__wrapper">
-              <div className="staff__title__2">
-                <span>De la neige en Avril ?</span>
+              <div className="staff__title">
+                <span>nous te proposons</span>
                 <div className="line"></div>
               </div>
             </div>
