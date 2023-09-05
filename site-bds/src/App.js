@@ -4,10 +4,7 @@ import { gsap } from "gsap";
 /*
  * Les pages
  */
-import Accueil from "./pages/Accueil.jsx";
 import Events from "./pages/Evenements.jsx";
-import Sports from "./pages/Sports.jsx";
-import Sponsors from "./pages/Sponsors.jsx";
 
 
 function App() {
@@ -68,10 +65,7 @@ const animation = () =>
   return (
     <Router>
         <Routes>
-          <Route exact path="/" element={<Accueil />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/sports" element={<Sports />} />
-          <Route path="/sponsors" element={<Sponsors />} />
+          <Route exact path="/" element={<Events />} />
         </Routes>
     </Router>
   );

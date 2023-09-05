@@ -7,7 +7,6 @@ function Navbar() {
     <header className="header">
       <div className="headband">
         <img className="logo" src="logo2Alpes.png" alt="logo"></img>
-        <Navigation />
       </div>
 
     </header>

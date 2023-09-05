@@ -9,6 +9,7 @@ import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
 import '../index.css';
 import ImageCarousel from './ImageCarousel';
+import ImageCarouselAppartement from './ImageCarouselAppartement';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -183,6 +184,133 @@ const VideoStation = () => (
   </Tree>
 );
 
+const PhotoLogement = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Le logement</span>
+      </div>
+    }
+  >
+    <TreeNode
+      label={
+        <StyledNode>
+            <ImageCarouselAppartement/>
+        </StyledNode>
+      }
+    >
+    </TreeNode>
+  </Tree>
+);
+
+
+const PhotoStation = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Photo de la station en Avril</span>
+      </div>
+    }
+  >
+    <TreeNode
+      label={
+        <StyledNode>
+            <ImageCarousel/>
+        </StyledNode>
+      }
+    >
+    </TreeNode>
+  </Tree>
+);
+
+const ListePrestation = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Les préstations</span>
+      </div>
+    }
+  >
+    <TreeNode
+      label={
+        <StyledNode>
+            <div className="content-style">
+              <h2>• Le Transport en bus (aller/retour)</h2>
+              <h2>• L'hébergement (7 nuits du Samedi au Samedi)</h2>
+              <h2>• Le forfait Skipass (6 jours du Dimanche au Vendredi)</h2>
+              <h2>• Le matériel de location (pack Bronze du Dimanche au Vendredi)</h2>
+              <h2>• Les draps </h2>
+            </div>
+        </StyledNode>
+      }
+    >
+    </TreeNode>
+  </Tree>
+);
+
+const ListeAvantage = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Les Animations</span>
+      </div>
+    }
+  >
+    <TreeNode
+      label={
+        <StyledNode>
+            <div className="content-style">
+              <h2>• Une demi journée de cours de ski offert</h2>
+              <h2>• Le Bracelet avantage station : réduction dans les bars/restaurants/animations</h2>
+              <h2>• Le WelcomePack : Petit Déjeuner d'accueil, Pot d'accueil, barbecue</h2>
+              <h2>• La beercard : une biere par personner par jour dans le bar partenaire</h2>
+            </div>
+        </StyledNode>
+      }
+    >
+    </TreeNode>
+  </Tree>
+);
+
+const ListeOption = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Les options</span>
+      </div>
+    }
+  >
+    <TreeNode
+      label={
+        <StyledNode>
+            <div className="content-style">
+              <h2>• Une demi journée de cours de ski offert</h2>
+              <h2>• Le Bracelet avantage station : réduction dans les bars/restaurants/animations</h2>
+              <h2>• Le WelcomePack : Petit Déjeuner d'accueil, Pot d'accueil, barbecue</h2>
+              <h2>• La beercard : une biere par personner par jour dans le bar partenaire</h2>
+            </div>
+        </StyledNode>
+      }
+    >
+    </TreeNode>
+  </Tree>
+);
+
 const LienWebcam = () => (
   <Tree
     lineWidth={"0px"}
@@ -297,7 +425,7 @@ export default function Accueil() {
     gsap.set(aboutIntro, { y: "100%", opacity: 0 });
 
     const tl = gsap.timeline({
-      defaults: { duration: 0.5, ease: "power2.inOut" }, // Réduire la durée de l'animation à 0.5 seconde
+      defaults: { duration: 10, ease: "power2.inOut" }, // Réduire la durée de l'animation à 0.5 seconde
       scrollTrigger: {
         trigger: heroBanner,
         start: "top top",
@@ -529,6 +657,21 @@ export default function Accueil() {
           trigger: ".about",
           start: "-30%",
           end: "5%",
+          scrub: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      "#tree",
+      { opacity: 0, y: "100%", },
+      {
+        opacity: 1,
+        y: 0,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: lenis.actualScroll,
+          start: "18%",
+          end: "26%",
           scrub: true,
         },
       }
@@ -809,10 +952,9 @@ export default function Accueil() {
               <PlanStation></PlanStation>
               <InfoStation></InfoStation>
               <InfoStationPiste></InfoStationPiste>
-            </div>
-            <div className="tree">
               <PresentationStation></PresentationStation>
-            </div> 
+            </div>
+
           </div>
           <div className="staff__box__wrapper-image-bottom">
             <img
@@ -825,14 +967,7 @@ export default function Accueil() {
             />
           </div>
         </div>    
-         
       </section>
-      <div className="staff2">
-        <div className="staff__box-image">
-          
-        </div>
-        
-      </div>   
       <section className="staff3" ref={staffRef2}>
         <div className="staff__wrapper__2">
           <div className="staff__box-image">
@@ -857,15 +992,24 @@ export default function Accueil() {
           </div>
           <div className="organigramme">
             <div className="tree">
-              <ImageCarousel />
+              <PhotoStation />
               <LienWebcam />
             </div>
             <div className="tree">
               <PresentationGlacier></PresentationGlacier>
             </div>
           </div>
+          <div className="staff__box__wrapper-image-bottom">
+            <img
+              className="staff__box-image-bottom"
+              src="/bg-bottom.svg"
+              width="250"
+              height="150"
+              loading="lazy"
+              alt="dots"
+            />
+          </div>
         </div>
-
       </section>
       <section className="staff4" ref={staffRef3}>
         <div className="staff__wrapper__3">
@@ -891,15 +1035,26 @@ export default function Accueil() {
           </div>
           <div className="organigramme">
             <div className="tree">
-              <ImageCarousel />
-              <LienWebcam />
+              <PhotoLogement />
             </div>
             <div className="tree">
-              <PresentationGlacier></PresentationGlacier>
+              <ListePrestation />
+            </div>
+            <div className="tree">
+              <ListeAvantage />
             </div>
           </div>
+          <div className="staff__box__wrapper-image-bottom">
+            <img
+              className="staff__box-image-bottom"
+              src="/bg-bottom.svg"
+              width="250"
+              height="150"
+              loading="lazy"
+              alt="dots"
+            />
+          </div>
         </div>
-
       </section>
       <Footer></Footer>
     </main>

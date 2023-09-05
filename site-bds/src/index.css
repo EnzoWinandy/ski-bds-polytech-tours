@@ -1423,6 +1423,12 @@ a:hover {
   max-width: 100%;
 }
 
+.liste li {
+  font-size: 18px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
 .staff {
   position: relative;
   z-index: 2;
@@ -1448,6 +1454,7 @@ a:hover {
   position: relative;
 }
 
+
 .staff__wrapper {
   width: 100%;
   display: block;
@@ -1464,7 +1471,7 @@ a:hover {
   position: relative;
   z-index: 1;
   background: var(--background-color);
-  clip-path: circle(calc(var(--val2) * 1%) at 50% calc(8px * 52));
+  clip-path: circle(calc(var(--val2) * 1%) at 50% calc(8px * 90));
 }
 
 .staff__wrapper__3 {
@@ -1473,7 +1480,7 @@ a:hover {
   position: relative;
   z-index: 1;
   background: var(--primary-color);
-  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 52));
+  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 90));
 }
 
 .staff__box-image {

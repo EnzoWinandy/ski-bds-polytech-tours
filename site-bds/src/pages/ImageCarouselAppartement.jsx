@@ -5,11 +5,12 @@ import '../index.css';
 
 const ImageCarousel = () => {
   const images = [
-    { src: '/img/photostation/station1.png', alt: 'Super Diable', description: 'Secteur Super Diable - 2400m' },
-    { src: '/img/photostation/station2.png', alt: 'Grande Aiguille', description: 'Secteur Grande Aiguille - 2100m' },
-    { src: '/img/photostation/station3.png', alt: 'Glacier', description: 'Secteur du Glacier - 3400m' },
-    { src: '/img/photostation/station4.png', alt: 'Fée', description: 'Secteur La Fée - 2200m' },
-    { src: '/img/photostation/station5.png', alt: 'Toura', description: 'Secteur Toura - 2600m' },
+    { src: '/img/logement/appart1.jpg',description: 'Logement - La Muzelle'},
+    { src: '/img/logement/appart2.jpg',description: 'Logement - La Muzelle'},
+    { src: '/img/logement/appart3.jpg',description: 'Logement - La Muzelle'},
+    { src: '/img/logement/appart4.jpg',description: 'Logement - La Muzelle'},
+    { src: '/img/logement/appart5.png',description: 'La Muzelle vers Le Diable (Télésiège)'},
+    { src: '/img/logement/appart6.png',description: 'La Muzelle dans les deux alpes'},
     // Ajoutez d'autres images avec leurs descriptions
   ];
 
@@ -17,7 +18,7 @@ const ImageCarousel = () => {
     <Carousel>
       {images.map((image, index) => (
         <div key={index} className="carousel" >
-          <img src={image.src} alt={image.alt} />
+          <img src={image.src} />
           <p className="legend">{image.description}</p>
         </div>
       ))}
