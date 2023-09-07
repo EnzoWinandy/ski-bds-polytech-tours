@@ -195,14 +195,6 @@ const PhotoLogement = () => (
       </div>
     }
   >
-    <TreeNode
-      label={
-        <StyledNode>
-            <ImageCarouselAppartement/>
-        </StyledNode>
-      }
-    >
-    </TreeNode>
   </Tree>
 );
 
@@ -218,14 +210,6 @@ const PhotoStation = () => (
       </div>
     }
   >
-    <TreeNode
-      label={
-        <StyledNode>
-            <ImageCarousel/>
-        </StyledNode>
-      }
-    >
-    </TreeNode>
   </Tree>
 );
 
@@ -307,7 +291,7 @@ const ListeOptions = () => (
               display: "flex",
               flexDirection: "row",
               gap: "8%",
-              width: "50%",
+              width: "100%",
               justifyContent: "center",
               alignItems: "center",
               padding: "10px",
@@ -323,7 +307,7 @@ const ListeOptions = () => (
               display: "flex",
               flexDirection: "row",
               gap: "8%",
-              width: "50%",
+              width: "100%",
               justifyContent: "center",
               alignItems: "center",
               padding: "10px",
@@ -353,7 +337,7 @@ const Prix = () => (
         <StyledNode>
           <div className="content-style">
             <h2>Intéresser ?</h2>
-            <a href="URL_DU_FORMULAIRE">Dit le nous ici !</a>
+            <a className="lbl-orga__no" href="https://forms.gle/K9dmgwhq6WUu1fga6">Dit le nous ici !</a>
           </div>
         </StyledNode>
       }
@@ -562,7 +546,7 @@ export default function Accueil() {
                 à notre tour cette semaine de ski.
                 <br />
                Pour résumer c'est un voyage organiser par le BDS pour les membres de l'école,
-               pendant une semaine (du 20 au 27 Avril 2024) dans la station des Deux Alpes.
+               pendant une semaine (du 20 au 27 Avril 2024, pendant les vacances scolaires) dans la station des Deux Alpes.
                 <br />
                 Ce voyage est organisé à 100% par nos équipes et accueillera les débutants aux sports d'hivers
                 tout comme les experts.
@@ -801,7 +785,12 @@ export default function Accueil() {
           </div>
           <div className="organigramme">
             <div className="tree">
-              <PhotoStation />
+              <PhotoStation/>
+            </div>
+            <div className="tree">
+              <ImageCarousel/>
+            </div>
+            <div className="tree">
               <LienWebcam />
             </div>
             <div className="tree">
@@ -844,7 +833,10 @@ export default function Accueil() {
           </div>
           <div className="organigramme">
             <div className="tree">
-              <PhotoLogement />
+              <PhotoLogement/>
+            </div>
+            <div className="tree">
+              <ImageCarouselAppartement/>
             </div>
             <div className="tree">
               <ListePrestation />
@@ -854,6 +846,9 @@ export default function Accueil() {
             </div>
             <div className="tree">
               <ListeOptions/>
+            </div>
+            <div className="tree">
+              <Prix/>
             </div>
           </div>
           <div className="staff__box__wrapper-image-bottom">

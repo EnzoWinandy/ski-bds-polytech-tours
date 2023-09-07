@@ -1481,7 +1481,7 @@ a:hover {
   position: relative;
   z-index: 1;
   background: var(--primary-color);
-  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 120));
+  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 150));
 }
 
 .staff__box-image {
