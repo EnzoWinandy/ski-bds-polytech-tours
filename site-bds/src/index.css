@@ -1000,9 +1000,10 @@ a:hover {
   top: 0px;
   bottom: -40%;
   z-index: -1;
-  height: 165%;
-  width: 110%;
+  height: auto;
+  width: auto;
   opacity: 0.6;
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1432,21 +1433,21 @@ a:hover {
 .staff {
   position: relative;
   z-index: 2;
-  --val: 1;
+  --val: 100;
   background: white;
 }
 
 .staff3 {
   position: relative;
   z-index: 2;
-  --val2: 1;
+  --val2: 100;
   background: white;
 }
 
 .staff4 {
   position: relative;
   z-index: 2;
-  --val3: 1;
+  --val3: 100;
   background: white;
 }
 
@@ -1480,7 +1481,7 @@ a:hover {
   position: relative;
   z-index: 1;
   background: var(--primary-color);
-  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 90));
+  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 120));
 }
 
 .staff__box-image {

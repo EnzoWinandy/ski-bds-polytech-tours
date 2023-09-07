@@ -11,13 +11,6 @@ function Footer() {
               <img src="/logoBdsBlanc.png" alt=""  style={{width:"100%"}} />
             </div>
           </Link>
-          <nav className="footer__navigation-wrapper">
-            <ul className="footer__navigation-list">
-              <li className="footer__navigation-item"><Link className="link footer__link">Evenements</Link></li>
-              <li className="footer__navigation-item"><Link className="link footer__link">Sports</Link></li>
-              <li className="footer__navigation-item"><Link className="link footer__link">Sponsors</Link></li>
-            </ul>
-          </nav>
           <div className="network">
             <Link className="network__link"  to="https://www.facebook.com/bdspolytechtours" data-action="from-circle"><div className="network__icon-wrapper"><i className='bx bxl-facebook'></i></div></Link>
             <Link className="network__link" to="https://www.instagram.com/bdspolytechtours/" data-action="from-circle"><div className="network__icon-wrapper"><i className='bx bxl-instagram'></i></div></Link>

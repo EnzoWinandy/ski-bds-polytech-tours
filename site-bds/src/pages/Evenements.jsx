@@ -248,6 +248,7 @@ const ListePrestation = () => (
               <h2>• L'hébergement (7 nuits du Samedi au Samedi)</h2>
               <h2>• Le forfait Skipass (6 jours du Dimanche au Vendredi)</h2>
               <h2>• Le matériel de location (pack Bronze du Dimanche au Vendredi)</h2>
+              <h2>• Des Goodies </h2>
               <h2>• Les draps </h2>
             </div>
         </StyledNode>
@@ -284,30 +285,79 @@ const ListeAvantage = () => (
   </Tree>
 );
 
-const ListeOption = () => (
+const ListeOptions = () => (
   <Tree
     lineWidth={"0px"}
     lineColor={"white"}
     lineBorderRadius={"0px"}
     label={
       <div className="lbl-orga">
-        <span>Les options</span>
+        <span>Les Options</span>
       </div>
     }
   >
+    {/* Responsable */}
     <TreeNode
       label={
         <StyledNode>
-            <div className="content-style">
-              <h2>• Une demi journée de cours de ski offert</h2>
-              <h2>• Le Bracelet avantage station : réduction dans les bars/restaurants/animations</h2>
-              <h2>• Le WelcomePack : Petit Déjeuner d'accueil, Pot d'accueil, barbecue</h2>
-              <h2>• La beercard : une biere par personner par jour dans le bar partenaire</h2>
+          <div className="content-style">
+            <h2>- Le matériel est compris dans le prix, une augmentation de gamme est possible :</h2>
+          </div>
+          <div className="plan__station__pic" style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "8%",
+              width: "50%",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "10px",
+            }}>
+              <img src="/img/options/gammeski.png" />
+            </div>
+          <div className="content-style">
+              <h2>- Déductions du matériel de location : -19€</h2>
+              <h2>- Location de casque: 25€</h2>
+              <h2>- Les assurances :</h2>
+          </div>
+          <div className="plan__station__pic" style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "8%",
+              width: "50%",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "10px",
+            }}>
+              <img src="/img/options/assurance.png" />
             </div>
         </StyledNode>
       }
-    >
-    </TreeNode>
+    />
+  </Tree>
+);
+
+const Prix = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Le Prix de base : 475€</span>
+      </div>
+    }
+  >
+    {/* Responsable */}
+    <TreeNode
+      label={
+        <StyledNode>
+          <div className="content-style">
+            <h2>Intéresser ?</h2>
+            <a href="URL_DU_FORMULAIRE">Dit le nous ici !</a>
+          </div>
+        </StyledNode>
+      }
+    />
   </Tree>
 );
 
@@ -449,248 +499,7 @@ export default function Accueil() {
       pinSpacing: false,
     });
 
-    let sloganLines = gsap.utils.toArray(".slogan__line-text");
-    sloganLines.forEach((element) => {
-      gsap.fromTo(
-        element,
-        { opacity: 1 },
-        {
-          opacity: 0,
-          duration: 0.8,
-          scrollTrigger: {
-            trigger: lenis.actualScroll,
-            start: "16%",
-            end: "25%",
-            scrub: true,
-          },
-        }
-      );
-    });
-    sloganLines.forEach((element) => {
-      gsap.fromTo(
-        element,
-        { y: "101%" },
-        {
-          y: 0,
-          duration: 0.8,
-          scrollTrigger: {
-            trigger: lenis.actualScroll,
-            start: "5%",
-            end: "10%",
-            scrub: true,
-          },
-        }
-      );
-    });
-    gsap.fromTo(
-      ".logoBDSV",
-      { opacity: 1, y: 0 },
-      {
-        opacity: 0,
-        y: "-100%",
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: lenis.actualScroll,
-          start: "16%",
-          end: "25%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      ".logoBDSV",
-      { opacity: 0, x: "-101%" },
-      {
-        x: 0,
-        opacity: 1,
-        ease: "power2.inOut",
-        duration: 5,
-        scrollTrigger: {
-          trigger: lenis.actualScroll,
-          start: "8%",
-          end: "13%",
-          scrub: true,
-        },
-      }
-    );
-
-    //Actualiser la valeur --val en l'incrémentant de staff__wrapper
-
-    gsap.fromTo(
-      ".staff__wrapper",
-      { "--val": 1 },
-      {
-        "--val": 100,
-        ease: "power2.inOut",
-        lazy: false,
-        scrollTrigger: {
-          trigger: staff,
-          start: "5% 5%",
-          end: () =>
-            "+=" +
-            (100 -
-              parseFloat(getComputedStyle(staff).getPropertyValue("--val"))) +
-            "%",
-          pin: true,
-          pinSpacing: true,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".staff__wrapper__2",
-      { "--val2": 1 },
-      {
-        "--val2": 100,
-        ease: "power2.inOut",
-        lazy: false,
-        scrollTrigger: {
-          trigger: staff2,
-          start: "5% 5%",
-          end: () =>
-            "+=" +
-            (100 -
-              parseFloat(getComputedStyle(staff2).getPropertyValue("--val2"))) +
-            "%",
-          pin: true,
-          pinSpacing: true,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".staff__wrapper__3",
-      { "--val3": 1 },
-      {
-        "--val3": 100,
-        ease: "power2.inOut",
-        lazy: false,
-        scrollTrigger: {
-          trigger: staff3,
-          start: "5% 5%",
-          end: () =>
-            "+=" +
-            (100 -
-              parseFloat(getComputedStyle(staff3).getPropertyValue("--val3"))) +
-            "%",
-          pin: true,
-          pinSpacing: true,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".col0",
-      { y: "75%" },
-      {
-        y: "-100%",
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".about-intro",
-          start: "-20%",
-          end: "50%",
-          scrub: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".col1",
-      { y: "-115%" },
-      {
-        y: "115%",
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".about-intro",
-          start: "-25%",
-          end: "50%",
-          scrub: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".racket",
-      { opacity: 0.4, y: 0 },
-      {
-        opacity: 0,
-        y: "-100%",
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: lenis.actualScroll,
-          start: "16%",
-          end: "20%",
-          scrub: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".title-about",
-      { opacity: 0, y: "-100%" },
-      {
-        opacity: 1,
-        y: 0,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".about",
-          start: "-30%",
-          end: "5%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      ".title-about-stroke",
-      { opacity: 0, y: "-100%" },
-      {
-        opacity: 1,
-        y: 0,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".about",
-          start: "-30%",
-          end: "5%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      "#tree",
-      { opacity: 0, y: "100%", },
-      {
-        opacity: 1,
-        y: 0,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: lenis.actualScroll,
-          start: "18%",
-          end: "26%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      ".content-style",
-      { opacity: 0, x: "-100%" },
-      {
-        opacity: 1,
-        x: 0,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".about",
-          start: "-30%",
-          end: "8%",
-          scrub: true,
-        },
-      }
-    );
+   
   }, []);
 
   useEffect(() => {
@@ -1042,6 +851,9 @@ export default function Accueil() {
             </div>
             <div className="tree">
               <ListeAvantage />
+            </div>
+            <div className="tree">
+              <ListeOptions/>
             </div>
           </div>
           <div className="staff__box__wrapper-image-bottom">
