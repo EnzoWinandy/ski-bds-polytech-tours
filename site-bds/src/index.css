@@ -1164,8 +1164,8 @@ a:hover {
 }
 
 .about__footer-img {
-  width: 65%;
-  bottom: 0;
+  width: 50%;
+  bottom: -100px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);

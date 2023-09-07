@@ -5,7 +5,7 @@ import '../index.css';
 
 const ImageCarousel = () => {
   const images = [
-    { src: '/img/logement/appart1.jpg',description: 'Logement - La Muzelle'},
+    { src: '/img/logement/appart1.png',description: 'Logement - La Muzelle'},
     { src: '/img/logement/appart2.jpg',description: 'Logement - La Muzelle'},
     { src: '/img/logement/appart3.jpg',description: 'Logement - La Muzelle'},
     { src: '/img/logement/appart4.jpg',description: 'Logement - La Muzelle'},

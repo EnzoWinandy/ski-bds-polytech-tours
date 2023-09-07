@@ -482,7 +482,35 @@ export default function Accueil() {
       pin: true,
       pinSpacing: false,
     });
+    gsap.fromTo(
+      ".col0",
+      { y: "75%" },
+      {
+        y: "-100%",
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".about-intro",
+          start: "-20%",
+          end: "50%",
+          scrub: true,
+        },
+      }
+    );
 
+    gsap.fromTo(
+      ".col1",
+      { y: "-115%" },
+      {
+        y: "115%",
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".about-intro",
+          start: "-25%",
+          end: "50%",
+          scrub: true,
+        },
+      }
+    );
    
   }, []);
 
@@ -713,7 +741,7 @@ export default function Accueil() {
           </div>
         </div>
 
-        <img src="/img/bannersport.png" className="about__footer-img" alt="" />
+        <img src="/img/skieur.png" className="about__footer-img" alt="" />
       </section>
       <section className="staff" ref={staffRef}>
         <div className="staff__wrapper">
