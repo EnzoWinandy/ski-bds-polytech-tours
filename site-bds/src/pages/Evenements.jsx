@@ -402,7 +402,7 @@ const PresentationStation = () => (
     <TreeNode
       label={
         <StyledNode>
-          <div className="content-style_2">
+          <div className="content-style">
               <h2>Le Domaines des deux alpes</h2>
               <p>
                 Le domaine skiable des Deux Alpes est l'un des plus grands et des plus renommés en France. Situé dans les Alpes françaises, il offre une expérience exceptionnelle pour les amateurs de sports d'hiver.
