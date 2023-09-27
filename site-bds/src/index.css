@@ -1110,6 +1110,16 @@ a:hover {
   margin-bottom: 20px;
 }
 
+
+.content-style_2 h2 {
+
+  font-size: 1.25rem;
+  font-family: Monument;
+  color: #1D1E1C;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
 .content-style p {
   font-weight: 400;
   font-family: Poppins;
@@ -1481,7 +1491,7 @@ a:hover {
   position: relative;
   z-index: 1;
   background: var(--primary-color);
-  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 150));
+  clip-path: circle(calc(var(--val3) * 1%) at 50% calc(8px * 170));
 }
 
 .staff__box-image {

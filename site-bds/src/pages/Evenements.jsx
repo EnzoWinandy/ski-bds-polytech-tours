@@ -227,13 +227,41 @@ const ListePrestation = () => (
     <TreeNode
       label={
         <StyledNode>
-            <div className="content-style">
+            <div className="content-style_2">
               <h2>• Le Transport en bus (aller/retour)</h2>
               <h2>• L'hébergement (7 nuits du Samedi au Samedi)</h2>
               <h2>• Le forfait Skipass (6 jours du Dimanche au Vendredi)</h2>
               <h2>• Le matériel de location (pack Bronze du Dimanche au Vendredi)</h2>
               <h2>• Des Goodies </h2>
               <h2>• Les draps </h2>
+            </div>
+        </StyledNode>
+      }
+    >
+    </TreeNode>
+  </Tree>
+);
+
+const ListeBarRestaurant = () => (
+  <Tree
+    lineWidth={"0px"}
+    lineColor={"white"}
+    lineBorderRadius={"0px"}
+    label={
+      <div className="lbl-orga">
+        <span>Les Bars/Réstaurant</span>
+      </div>
+    }
+  >
+    <TreeNode
+      label={
+        <StyledNode>
+            <div className="content-style_2">
+              <h2>• La Grotte du yeti (au pied de la résidence)</h2>
+              <h2>• The red frog (pub irlandais, au pied de la résidence)</h2>
+              <h2>• Owasabi Mountains (Réstaurant japonais au pied de la résidence)</h2>
+              <h2>• Le Cellier (Réstaurant traditionel de montagne en face de la résidence)</h2>
+              <h2>• L'Avalanche (Discothèque à 4 minutes à pied) </h2>
             </div>
         </StyledNode>
       }
@@ -256,11 +284,15 @@ const ListeAvantage = () => (
     <TreeNode
       label={
         <StyledNode>
-            <div className="content-style">
+            <div className="content-style_2">
               <h2>• Une demi journée de cours de ski offert</h2>
-              <h2>• Le Bracelet avantage station : réduction dans les bars/restaurants/animations</h2>
-              <h2>• Le WelcomePack : Petit Déjeuner d'accueil, Pot d'accueil, barbecue</h2>
-              <h2>• La beercard : une biere par personner par jour dans le bar partenaire</h2>
+              <h2>• Le Bracelet avantage station : </h2>
+              <h2>réductions dans les bars/restaurants</h2>
+              <h2>• Le WelcomePack : Petit Déjeuner d'accueil,</h2>
+              <h2>Pot d'accueil, barbecue</h2>
+              <h2>• La beercard :</h2>
+              <h2>une biere par personner</h2>
+              <h2>par jour dans le bar partenaire</h2>
             </div>
         </StyledNode>
       }
@@ -284,7 +316,7 @@ const ListeOptions = () => (
     <TreeNode
       label={
         <StyledNode>
-          <div className="content-style">
+          <div className="content-style_2">
             <h2>- Le matériel est compris dans le prix, une augmentation de gamme est possible :</h2>
           </div>
           <div className="plan__station__pic" style={{
@@ -298,7 +330,7 @@ const ListeOptions = () => (
             }}>
               <img src="/img/options/gammeski.png" />
             </div>
-          <div className="content-style">
+          <div className="content-style_2">
               <h2>- Déductions du matériel de location : -19€</h2>
               <h2>- Location de casque: 25€</h2>
               <h2>- Les assurances :</h2>
@@ -370,7 +402,7 @@ const PresentationStation = () => (
     <TreeNode
       label={
         <StyledNode>
-          <div className="content-style">
+          <div className="content-style_2">
               <h2>Le Domaines des deux alpes</h2>
               <p>
                 Le domaine skiable des Deux Alpes est l'un des plus grands et des plus renommés en France. Situé dans les Alpes françaises, il offre une expérience exceptionnelle pour les amateurs de sports d'hiver.
@@ -419,7 +451,7 @@ const PresentationGlacier = () => (
             }}>
               <img src="/img/Glacier.jpg" />
             </div>
-          <div className="content-style">
+          <div className="content-style_2">
               <h2>Les pistes les plus hautes de france</h2>
               <p>
                 À une altitude impressionnante allant jusqu'à 3 600 mètres, ce glacier offre des conditions de neige optimales et une vue panoramique à couper le souffle sur les montagnes environnantes.
@@ -583,6 +615,8 @@ export default function Accueil() {
                 Forfait de ski, Location de matériel, hors nouritture)
                 D'autre option seront disponible lors de l'inscription.
               </p>
+              <h2>Peu importe ta filière, tu es le bienvenu !</h2>
+              <p>(Il faut juste être majeure au moment du voyage)</p>
               <p> BDS'ment 💜 </p>
               <span className="signe">L'équipe</span>
             </div>
@@ -871,6 +905,9 @@ export default function Accueil() {
             </div>
             <div className="tree">
               <ListeAvantage />
+            </div>
+            <div className="tree">
+              <ListeBarRestaurant />
             </div>
             <div className="tree">
               <ListeOptions/>
